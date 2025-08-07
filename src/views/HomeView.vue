@@ -4,6 +4,15 @@ import HelloWorld from '../components/HelloWorld.vue'
 
 <template>
   <main>
-    <HelloWorld msg="Henlo world"/>
+    <div class="home">
+      <HelloWorld msg="Henlo world"/>
+    </div>
   </main>
 </template>
+
+
+<style scoped>
+  .home {
+    padding: 5px;
+  }
+</style>
