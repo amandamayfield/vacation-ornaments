@@ -14,7 +14,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <RouterView />
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .header {
   height: 300px;
   background-color: grey;

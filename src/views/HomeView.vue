@@ -11,8 +11,8 @@ import HelloWorld from '../components/HelloWorld.vue'
 </template>
 
 
-<style scoped>
-  .home {
-    padding: 5px;
-  }
+<style lang="scss" scoped>
+.home {
+  padding: 24px;
+}
 </style>
