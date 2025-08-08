@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import NavButton from './components/NavButton.vue';
 </script>
 
 <template>
   <header class="header">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="ornament">Ornament</RouterLink>
-        <RouterLink to="/add">Add</RouterLink>
-      </nav>
+    <NavButton/>
   </header>
 
   <RouterView />

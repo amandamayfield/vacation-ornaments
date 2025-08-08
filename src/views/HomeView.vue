@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import HelloWorld from '../components/HelloWorld.vue'
+import OrnamentGallery from '../components/OrnamentGallery.vue'
 </script>
 
 <template>
   <main>
     <div class="home">
-      <HelloWorld msg="Henlo world"/>
+      <OrnamentGallery />
     </div>
   </main>
 </template>

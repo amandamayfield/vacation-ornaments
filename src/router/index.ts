@@ -15,11 +15,9 @@ const router = createRouter({
       component: () => import('../views/AddView.vue'),
     },
     {
-      path: '/ornament',
+      path: '/ornament/:id',
       name: 'ornament',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      props: true,
       component: () => import('../views/OrnamentView.vue'),
     },
   ],
