@@ -2,7 +2,7 @@
 import { RouterLink } from 'vue-router';
 
 defineProps<{
-  id: string
+  id: number
 }>()
 </script>
 

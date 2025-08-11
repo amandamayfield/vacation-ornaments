@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useOrnamentStore } from '@/stores/ornaments'
+
 import GalleryItem from '../components/GalleryItem.vue';
 
-const ornaments = ref([{id: '1', date: 'November 2021'}, {id: '2', date: 'June 2022'}, {id: '3', date: 'October 2022'}]);
+const store = useOrnamentStore();
+
+const ornaments = store.mockData;
 </script>
 
 <template>
