@@ -1,8 +1,7 @@
-import { ref } from 'vue'
-import { defineStore } from 'pinia'
+import type { Ornament } from './types'
 
-export const useOrnamentStore = defineStore('ornaments', () => {
-  const mockData = ref([
+export function fetchOrnaments(): Promise<Ornament[]> {
+  return Promise.resolve([
     {
       id: 1,
       date: 'November 2021',
@@ -30,6 +29,4 @@ export const useOrnamentStore = defineStore('ornaments', () => {
         'https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI',
     },
   ])
-
-  return { mockData }
-})
+}

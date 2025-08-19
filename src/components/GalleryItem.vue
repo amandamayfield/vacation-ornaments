@@ -1,14 +1,17 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
+import type { Ornament } from '../stores/ornaments/types';
 
-defineProps<{
-  id: number
+const props = defineProps<{
+  item: Ornament;
 }>()
 </script>
 
 <template>
   <div class="gallery-item">
-    <RouterLink class="gallery-item__link" :to="{name: 'ornament',  params: { id }}">{{ id }}</RouterLink>
+    <RouterLink class="gallery-item__link" :to="{name: 'ornament',  params: { id: props.item.id }}">
+      <img :src="props.item.photo" width="300">
+    </RouterLink>
   </div>
 </template>
 
@@ -17,7 +20,6 @@ defineProps<{
   display: flex;
   &__link {
     padding: 24px;
-    background-color: chocolate;
   }
 }
 </style>

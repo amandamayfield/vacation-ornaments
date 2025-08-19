@@ -1,17 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useOrnamentStore } from '@/stores/ornaments'
-
+import { onMounted, computed } from 'vue';
+import { useOrnamentStore } from '@/stores/ornaments/ornaments'
 import GalleryItem from '../components/GalleryItem.vue';
 
 const store = useOrnamentStore();
+const ornaments = computed(() => store.ornaments);
 
-const ornaments = store.mockData;
+onMounted(() => {
+  store.getData();
+})
 </script>
 
 <template>
   <div class="gallery">
-    <GalleryItem v-for="item in ornaments" :key="item.id" :id="item.id"/>
+    <GalleryItem v-for="item in ornaments" :key="item.id" :item="item"/>
   </div>
 </template>
 
