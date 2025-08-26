@@ -17,7 +17,7 @@ const router = createRouter({
     {
       path: '/ornament/:id',
       name: 'ornament',
-      props: true,
+      props: (route) => ({ id: Number(route.params.id) }),
       component: () => import('../views/OrnamentView.vue'),
     },
   ],

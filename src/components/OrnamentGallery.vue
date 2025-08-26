@@ -4,16 +4,16 @@ import { useOrnamentStore } from '@/stores/ornaments/ornaments'
 import GalleryItem from '../components/GalleryItem.vue';
 
 const store = useOrnamentStore();
-const ornaments = computed(() => store.ornaments);
+const ornamentsIds = computed(() => store.ornamentIds);
 
 onMounted(() => {
-  store.getData();
+  store.getOrnaments();
 })
 </script>
 
 <template>
   <div class="gallery">
-    <GalleryItem v-for="item in ornaments" :key="item.id" :item="item"/>
+    <GalleryItem v-for="id in ornamentsIds" :key="id" :id="id"/>
   </div>
 </template>
 
@@ -21,6 +21,7 @@ onMounted(() => {
 .gallery {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 24px;
   background-color: burlywood;
 }

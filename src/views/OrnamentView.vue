@@ -1,13 +1,29 @@
 <script setup lang="ts">
-defineProps<{
-  id: string
+import { computed, onMounted } from 'vue';
+import { useOrnamentStore } from '@/stores/ornaments/ornaments'
+
+const props = defineProps<{
+  id: number
 }>()
+
+const store = useOrnamentStore();
+const ornament = computed(() => store.getOneOrnament(props.id));
+
+onMounted(() => {
+  if (store.ornamentsMap.get(props.id) === undefined) {
+    store.getOrnaments();
+  }
+});
 </script>
 
 <template>
   <div class="ornament">
-    <h1>This is an ornament detail page</h1>
-    <p>ornament {{ id }}</p>
+    <div class="ornament-card">
+      <h1>This is an ornament detail page</h1>
+      <p>location: {{ ornament.location }}</p>
+      <p>date: {{ ornament.date }}</p>
+      <p>description: {{ ornament.description }}</p>
+    </div>
   </div>
 </template>
 
