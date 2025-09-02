@@ -3,11 +3,11 @@ import OrnamentGallery from '../components/OrnamentGallery.vue'
 </script>
 
 <template>
-  <main>
+  <div>
     <div class="home">
       <OrnamentGallery />
     </div>
-  </main>
+  </div>
 </template>
 
 
@@ -15,19 +15,6 @@ import OrnamentGallery from '../components/OrnamentGallery.vue'
 @use './../assets/base.scss';
 
 .home {
-  padding: 60px 36px;
-  background-color: var(--warm-white);
-}
-
-@media (max-width: 1280px) {
-  .home {
-    padding: 48px 24px;
-  }
-}
-
-@media (max-width: 600px) {
-  .home {
-    padding: 36px 12px;
-  }
+  padding: 1px;
 }
 </style>

@@ -8,10 +8,19 @@ import NavButton from './components/NavButton.vue';
     <NavButton/>
   </header>
 
-  <RouterView />
+  <main>
+    <RouterView class="main"/>
+  </main>
 </template>
 
 <style lang="scss" scoped>
+@use './assets/base.scss';
+
+.main {
+  padding: 60px 36px;
+  background-color: var(--warm-white);
+}
+
 .header {
   height: 300px;
   background-image: url('./images/xmas-tree-bg.jpg');
@@ -26,11 +35,17 @@ import NavButton from './components/NavButton.vue';
   .header {
     height: 250px;
   }
+  .main {
+    padding: 48px 24px;
+  }
 }
 
 @media (max-width: 600px) {
   .header {
     height: 150px;
+  }
+  .main {
+    padding: 36px 12px;
   }
 }
 </style>

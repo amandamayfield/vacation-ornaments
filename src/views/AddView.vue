@@ -1,6 +1,8 @@
 <template>
-  <div class="add">
-    <h1>This is an ornament add page</h1>
+  <div>
+    <div class="add">
+      <h1>This is an ornament add page</h1>
+    </div>
   </div>
 </template>
 

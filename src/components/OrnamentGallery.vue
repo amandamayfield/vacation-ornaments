@@ -24,7 +24,8 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 24px;
+  padding: 36px;
   background-color: var(--dark-green);
+  border-radius: 24px;
 }
 </style>
