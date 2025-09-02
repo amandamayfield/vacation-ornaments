@@ -14,18 +14,23 @@ import NavButton from './components/NavButton.vue';
 <style lang="scss" scoped>
 .header {
   height: 300px;
-  background-color: grey;
+  background-image: url('./images/xmas-tree-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 1280px) {
   .header {
-    height: 200px;
+    height: 250px;
   }
 }
 
 @media (max-width: 600px) {
   .header {
-    height: 100px;
+    height: 150px;
   }
 }
 </style>

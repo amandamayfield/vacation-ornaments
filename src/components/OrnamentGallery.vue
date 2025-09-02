@@ -18,11 +18,13 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+@use './../assets/base.scss';
+
 .gallery {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 24px;
-  background-color: burlywood;
+  background-color: var(--dark-green);
 }
 </style>

@@ -28,7 +28,9 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-  .ornament {
-    padding: 5px;
-  }
+@use './../assets/base.scss';
+
+.ornament {
+  padding: 24px;
+}
 </style>
